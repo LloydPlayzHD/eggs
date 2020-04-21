@@ -1,0 +1,36 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2020-04-21T14:12:49-04:00",
+    "name": "Discord.Js upated for CoreBot",
+    "author": "lloyd@pika.best",
+    "description": "a discord js bot egg made for corebot\r\n\r\n:D\r\n\r\nThis was made for fun and should work for almost any nodejs application :D",
+    "image": "quay.io\/parkervcp\/pterodactyl-images:debian_nodejs-12",
+    "startup": "cd \/home\/container && npm install && node {{BOT_JS_FILE}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Bot ready.\"\r\n}",
+        "logs": "{}",
+        "stop": "stop"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#\/bin\/ash\r\n\r\napk add --no-cache git make gcc g++ python\r\n\r\ncd \/mnt\/server\r\n\r\necho -e \"install complete\"\r\nexit 0",
+            "container": "node:10-alpine",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Index.js File :D",
+            "description": "The file that starts the bot.",
+            "env_variable": "BOT_JS_FILE",
+            "default_value": "index.js",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string"
+        }
+    ]
+}
