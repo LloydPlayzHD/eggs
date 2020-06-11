@@ -9,13 +9,13 @@ Packages:  autoconf automake g++ libtool build-essential
 
 ****
 #### How To Install?
-First of all download "corebot-egg" and then go to pterodactyl -> Admin Control Panel >Nests > "Create New" (Name: Discord) then Save > "Import egg" (Select the file you just downloaded and Nest = Discord) > Import.
+First of all download "corebot-egg" and then go to Pterodactyl -> Admin Control Panel >Nests > "Create New" (Name: Discord) then Save > "Import egg" (Select the file you just downloaded and Nest = Discord) > Import.
 
 **NOW RESTART DAEMON** Then you are done!
 ****
 
 #### How To Update?
-First of all download "corebot-egg" and then go to pterodactyl -> Admin Control Panel >Nests > Discord > Select "CoreBot DiscordEgg (NodeJS 12) > Delete > "Import egg" (Select the file you just downloaded and Nest = Discord) > Import.
+First of all download "corebot-egg" and then go to Pterodactyl -> Admin Control Panel >Nests > Discord > Select "CoreBot DiscordEgg (NodeJS 12) > Delete > "Import egg" (Select the file you just downloaded and Nest = Discord) > Import.
 
 **NOW RESTART DAEMON** Then you are done!
 ****
