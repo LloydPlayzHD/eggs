@@ -1,11 +1,11 @@
 # Welcome to my pterodactyl  eggs.
 
 #### CoreBot (Discord Bot) 
-What does it do?
+What does it do?<br>
 Auto installs dependencies and allows you to run the bot without installing any node_modules
 ****
-NOTE: Please make sure you have the following linux packages installed before using.
-Packages:  autoconf automake g++ libtool build-essential 
+NOTE: Please make sure you have the following linux packages installed before using. <br>
+Packages: autoconf automake g++ libtool build-essential 
 
 ****
 #### How To Install?
