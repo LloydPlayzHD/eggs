@@ -3,12 +3,12 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2020-05-08T14:12:49-04:00",
-    "name": "CoreBot DiscordEgg (NodeJS 12)",
+    "exported_at": "2020-06-11T11:29:50-04:00",
+    "name": "CoreBot DiscordEgg (NodeJS 12) V1.3",
     "author": "lloyd@pika.best",
-    "description": "a discord js bot egg made for corebot\r\n\r\n:D\r\n\r\nThis was made for fun and should work for almost any nodejs application :D",
+    "description": "CoreBot Egg,\r\nWhenever you create a server please DO NOT delete node_modules. This will uninstall sodium.\r\nYou will also need (apt-get install autoconf automake g++ libtool build-essential) installed checkout more on https:\/\/docs.corebot.dev\/en\/Setup\/Dependencies",
     "image": "quay.io\/parkervcp\/pterodactyl-images:debian_nodejs-12",
-    "startup": "cd \/home\/container && npm install && node {{BOT_JS_FILE}}",
+    "startup": "cd \/home\/container && npm install && node {{BOT_JS_FILE}} {{NO_INSTALL}}",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Bot ready.\"\r\n}",
@@ -17,20 +17,29 @@
     },
     "scripts": {
         "installation": {
-            "script": "#\/bin\/ash\r\n\r\napk add --no-cache git make gcc g++ python\r\n\r\ncd \/mnt\/server\r\n\r\necho -e \"install complete\"\r\nexit 0",
+            "script": "#\/bin\/ash\r\n\r\napk add --no-cache git make gcc g++ python\r\n\r\ncd \/mnt\/server\r\nwget https:\/\/github.com\/LloydPlayzHD\/eggs\/blob\/master\/corebot-dependencies\/node.zip\r\nunzip node.zip\r\nrm -rf node.zip\r\n\r\n\r\necho -e \"install complete\"\r\nexit 0",
             "container": "node:10-alpine",
             "entrypoint": "ash"
         }
     },
     "variables": [
         {
-            "name": "Index.js File :D",
+            "name": "Startup file",
             "description": "The file that starts the bot.",
             "env_variable": "BOT_JS_FILE",
             "default_value": "index.js",
             "user_viewable": 1,
             "user_editable": 1,
             "rules": "required|string"
+        },
+        {
+            "name": "Additional Startup Command",
+            "description": "If you want to disable sqlite3 installing please type --no-install",
+            "env_variable": "NO_INSTALL",
+            "default_value": "",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "nullable|max:20"
         }
     ]
 }
