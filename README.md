@@ -1,5 +1,5 @@
 # Welcome to my pterodactyl  eggs.
-
+sssssspt https://discord.gg/B3tcuH best hosting ;) for corebot
 #### CoreBot (Discord Bot) 
 What does it do?<br>
 Auto installs dependencies and allows you to run the bot without installing any node_modules
