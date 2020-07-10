@@ -1,0 +1,45 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1"
+    },
+    "exported_at": "2020-07-08T19:12:40-04:00",
+    "name": "Discord.Java Java",
+    "author": "lloyd@lloyd.best",
+    "description": "Discord egg made by Lloyd#4414",
+    "image": "quay.io\/parkervcp\/pterodactyl-images:debian_openjdk-8-jre",
+    "startup": "java -Djavax.accessibility.assistive_technologies=\" \" -Dnogui=true -jar {{BOT_JAR_FILE}} {{NO_INSTALL}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "apt update\r\napt install -y jq curl\r\n[ ! -d \/mnt\/server ] && mkdir \/mnt\/server\r\n\r\ncd \/mnt\/server\r\n\r\necho \"Job's Done\"",
+            "container": "debian:buster-slim",
+            "entrypoint": "\/bin\/bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Startup file",
+            "description": "The file that starts the bot.",
+            "env_variable": "BOT_JAR_FILE",
+            "default_value": "bot.jar",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "required|string"
+        },
+        {
+            "name": "Additional Startup Command",
+            "description": "",
+            "env_variable": "NO_INSTALL",
+            "default_value": "",
+            "user_viewable": 1,
+            "user_editable": 1,
+            "rules": "nullable|max:20"
+        }
+    ]
+}
