@@ -3,8 +3,8 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2020-07-27T13:50:21-04:00",
-    "name": "CoreBot DiscordEgg (NodeJS 12) V1.4",
+    "exported_at": "2020-06-11T16:33:59-04:00",
+    "name": "CoreBot DiscordEgg (NodeJS 12) V1.3",
     "author": "lloyd@pika.best",
     "description": "CoreBot Egg,\r\nWhenever you create a server please DO NOT delete node_modules. This will uninstall sodium.\r\nYou will also need (apt-get install autoconf automake g++ libtool build-essential) installed checkout more on https:\/\/docs.corebot.dev\/en\/Setup\/Dependencies",
     "image": "quay.io\/parkervcp\/pterodactyl-images:debian_nodejs-12",
@@ -17,7 +17,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#\/bin\/ash\r\n\r\napk add --no-cache git make gcc g++ python\r\n\r\ncd \/mnt\/server\r\nrm -rf node_modules\r\nrm -rf .cache\r\nrm -rf .npm\r\nwget https:\/\/github.com\/LloydPlayzHD\/eggs\/raw\/master\/corebot-dependencies\/node.zip\r\nwget https:\/\/github.com\/LloydPlayzHD\/eggs\/raw\/master\/corebot-dependencies\/node2.zip\r\nunzip node.zip\r\nrm -rf node.zip\r\nrm -rf node2.zip\r\n\r\n\r\necho -e \"install complete\"\r\nexit 0",
+            "script": "#\/bin\/ash\r\n\r\napk add --no-cache git make gcc g++ python\r\n\r\ncd \/mnt\/server\r\nwget https:\/\/github.com\/LloydPlayzHD\/eggs\/raw\/master\/corebot-dependencies\/node.zip\r\nunzip node.zip\r\nrm -rf node.zip\r\n\r\n\r\necho -e \"install complete\"\r\nexit 0",
             "container": "node:10-alpine",
             "entrypoint": "ash"
         }
