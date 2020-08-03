@@ -39,7 +39,7 @@
             "default_value": "",
             "user_viewable": 1,
             "user_editable": 1,
-            "rules": "nullable|max:20"
+            "rules": "nullable|max:50"
         }
     ]
 }
