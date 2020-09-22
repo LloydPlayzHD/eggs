@@ -29,3 +29,4 @@ First of all download "corebot-egg" and then go to Pterodactyl -> Admin Control 
 
 #### Spigot (Java-11) 
 This egg allows you run PaperSpigot or normal spigot using Java 11 (Used for some new plugins and was made for a friend)
+
