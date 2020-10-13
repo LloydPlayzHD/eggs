@@ -3,8 +3,8 @@
     "meta": {
         "version": "PTDL_v1"
     },
-    "exported_at": "2020-08-04T06:45:44-04:00",
-    "name": "CoreBot DiscordEgg (NodeJS 12) V1.6",
+    "exported_at": "2020-10-13T09:41:19-04:00",
+    "name": "CoreBot DiscordEgg (NodeJS 12) V1.7",
     "author": "lloyd@lloyd.best",
     "description": "CoreBot Egg,\r\nWhenever you create a server please DO NOT delete node_modules. This will uninstall sodium.\r\nYou will also need (apt-get install autoconf automake g++ libtool build-essential) installed checkout more on https:\/\/docs.corebot.dev\/en\/Setup\/Dependencies",
     "image": "quay.io\/parkervcp\/pterodactyl-images:debian_nodejs-12",
@@ -17,7 +17,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#\/bin\/ash\r\n\r\napk add --no-cache git make gcc g++ python\r\n\r\ncd \/mnt\/server\r\nrm -rf node_modules\r\nrm -rf .cache\r\nrm -rf .npm\r\nwget https:\/\/github.com\/LloydPlayzHD\/eggs\/raw\/master\/corebot-dependencies\/node.zip\r\nwget https:\/\/github.com\/LloydPlayzHD\/eggs\/raw\/master\/corebot-dependencies\/node2.zip\r\nunzip node.zip\r\nunzip node2.zip\r\nrm -rf node.zip\r\nrm -rf node2.zip\r\n\r\n\r\necho -e \"install complete\"\r\nexit 0",
+            "script": "#\/bin\/ash\r\n\r\napk add --no-cache git make gcc g++ python curl\r\n\r\ncd \/mnt\/server\r\nrm -rf .config\/\r\nrm -rf .npm\/\r\nrm -rf node_modules\/\r\necho \"Downloading Package 1\"\r\ncurl https:\/\/lloyd.best\/corebot\/node.zip -O -J -L\r\necho \"Downloading Package 2\"\r\ncurl https:\/\/lloyd.best\/corebot\/node1.zip -O -J -L\r\necho \"Unzipping Package 1\"\r\nunzip -o node.zip\r\necho \"Unzipping Package 2\"\r\nunzip -o node1.zip\r\necho \"Removing Package zips\"\r\nrm -rf node.zip\r\nrm -rf node1.zip\r\necho \"The script is done... Sadly\"\r\necho \" \"\r\necho \" \"\r\necho \" \"\r\necho \"-------------------------\"\r\necho \" \"\r\necho \"Thank you for using Lloyd.Best's Pterodactyl Egg\"\r\necho \"For CoreBot. Please go to File Management then upload Corebot.zip\"\r\necho \"Then right click and extract\"\r\necho \"If you need any further Support for Pterodactyl. Feel free to contact us in discord.gg\/zTwxvFD\"\r\necho \"If you need any further Support for CoreBot. Please ask in the COREBOT discord!\"\r\necho \" \"\r\necho -e \"-------------------------\"\r\nexit 0",
             "container": "node:10-alpine",
             "entrypoint": "ash"
         }
@@ -28,8 +28,8 @@
             "description": "The file that starts the bot.",
             "env_variable": "BOT_JS_FILE",
             "default_value": "index.js",
-            "user_viewable": 1,
-            "user_editable": 1,
+            "user_viewable": true,
+            "user_editable": true,
             "rules": "required|string"
         },
         {
@@ -37,8 +37,8 @@
             "description": "If you want to disable sqlite3 installing please type --no-install",
             "env_variable": "NO_INSTALL",
             "default_value": "",
-            "user_viewable": 1,
-            "user_editable": 1,
+            "user_viewable": true,
+            "user_editable": true,
             "rules": "nullable|max:50"
         }
     ]
