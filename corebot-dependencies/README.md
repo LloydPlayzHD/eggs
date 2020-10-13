@@ -1,4 +1,4 @@
-## Files have moved to https://egg.lloyd.best/
+## Files have moved to https://egg.lloyd.best/ / moving to
 
 # CoreBot Linux Dependencies 
 https://lloyd.best/corebot/node.zip
